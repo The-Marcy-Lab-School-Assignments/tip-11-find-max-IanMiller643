@@ -9,7 +9,14 @@
  */
 
 const findMax = (numbers) => {
- //write your code here
+    //write your code here
+    let largest = numbers[0];
+    for (let i = 0; i < numbers.length; i++) {
+        if (largest < numbers[i]) {
+            largest = numbers[i];
+        }
+    }
+    return largest;
 };
 
 // Export the function for testing
