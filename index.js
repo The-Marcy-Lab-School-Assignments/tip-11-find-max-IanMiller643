@@ -11,13 +11,18 @@
 const findMax = (numbers) => {
     //write your code here
     let largest = numbers[0];
+    let pos;
     for (let i = 0; i < numbers.length; i++) {
         if (largest < numbers[i]) {
             largest = numbers[i];
         }
+        if (largest === numbers[i]) {
+            pos = i;
+        }
     }
-    return largest;
+    return `Max:${largest} Index:${pos}`;
 };
+console.log(findMax([3, 7, 2, 1]))
 
 // Export the function for testing
 module.exports = { findMax };
